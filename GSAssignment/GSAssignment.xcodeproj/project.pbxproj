@@ -26,6 +26,9 @@
 		392C9CC2270A5717006C35D7 /* ImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392C9CC1270A5717006C35D7 /* ImageDetailView.xib */; };
 		392C9CD6270AF6D7006C35D7 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392C9CD5270AF6D7006C35D7 /* PersistanceManager.swift */; };
 		392C9CD8270B03BC006C35D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392C9CD7270B03BC006C35D7 /* Constants.swift */; };
+		392C9CDA270B078E006C35D7 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392C9CD9270B078E006C35D7 /* BookmarkViewController.swift */; };
+		392C9CDE270B08B7006C35D7 /* BookmarkImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392C9CDC270B08B7006C35D7 /* BookmarkImageCell.swift */; };
+		392C9CDF270B08B7006C35D7 /* BookmarkImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392C9CDD270B08B7006C35D7 /* BookmarkImageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		392C9CC1270A5717006C35D7 /* ImageDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailView.xib; sourceTree = "<group>"; };
 		392C9CD5270AF6D7006C35D7 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		392C9CD7270B03BC006C35D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		392C9CD9270B078E006C35D7 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		392C9CDC270B08B7006C35D7 /* BookmarkImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkImageCell.swift; sourceTree = "<group>"; };
+		392C9CDD270B08B7006C35D7 /* BookmarkImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkImageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		392C9C9F27086D9F006C35D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				392C9CDB270B0894006C35D7 /* BookmarkedImageCell */,
 				392C9CB8270983C4006C35D7 /* GalleryCells */,
 				392C9CAC2708BEFC006C35D7 /* ImageDetailView */,
 			);
@@ -124,6 +131,7 @@
 			children = (
 				392C9C8E27086D5E006C35D7 /* ImageViewController.swift */,
 				392C9CBD270A55D2006C35D7 /* ImageDetailViewController.swift */,
+				392C9CD9270B078E006C35D7 /* BookmarkViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +184,15 @@
 				392C9CBA270983FC006C35D7 /* GalleryCell.xib */,
 			);
 			path = GalleryCells;
+			sourceTree = "<group>";
+		};
+		392C9CDB270B0894006C35D7 /* BookmarkedImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				392C9CDC270B08B7006C35D7 /* BookmarkImageCell.swift */,
+				392C9CDD270B08B7006C35D7 /* BookmarkImageCell.xib */,
+			);
+			path = BookmarkedImageCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,7 @@
 				392C9C9427086D66006C35D7 /* Assets.xcassets in Resources */,
 				392C9C9227086D5E006C35D7 /* Main.storyboard in Resources */,
 				392C9CC2270A5717006C35D7 /* ImageDetailView.xib in Resources */,
+				392C9CDF270B08B7006C35D7 /* BookmarkImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +272,14 @@
 				392C9CB72708E07F006C35D7 /* Date + Extensions.swift in Sources */,
 				392C9CBE270A55D2006C35D7 /* ImageDetailViewController.swift in Sources */,
 				392C9CAB27087F35006C35D7 /* ImageViewModel.swift in Sources */,
+				392C9CDA270B078E006C35D7 /* BookmarkViewController.swift in Sources */,
 				392C9CA9270874F6006C35D7 /* ServerManager.swift in Sources */,
 				392C9CD6270AF6D7006C35D7 /* PersistanceManager.swift in Sources */,
 				392C9CC0270A56F3006C35D7 /* ImageDetailView.swift in Sources */,
 				392C9C8F27086D5E006C35D7 /* ImageViewController.swift in Sources */,
 				392C9CA427086ECC006C35D7 /* ImageModel.swift in Sources */,
 				392C9CBB270983FC006C35D7 /* GalleryCell.swift in Sources */,
+				392C9CDE270B08B7006C35D7 /* BookmarkImageCell.swift in Sources */,
 				392C9C8B27086D5E006C35D7 /* AppDelegate.swift in Sources */,
 				392C9CD8270B03BC006C35D7 /* Constants.swift in Sources */,
 				392C9CB52708D571006C35D7 /* UIView + Extensions.swift in Sources */,

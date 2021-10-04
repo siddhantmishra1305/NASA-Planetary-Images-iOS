@@ -21,30 +21,47 @@
                     </tabBar>
                     <connections>
                         <segue destination="cHz-dB-5oW" kind="relationship" relationship="viewControllers" id="CNC-pD-UqQ"/>
-                        <segue destination="JXx-mf-fnZ" kind="relationship" relationship="viewControllers" id="KsL-xp-wPg"/>
+                        <segue destination="MlJ-Pf-ado" kind="relationship" relationship="viewControllers" id="KsL-xp-wPg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hr6-ci-3NZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1950" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--BookMark-->
         <scene sceneID="yqE-Zt-o3L">
             <objects>
-                <viewController id="JXx-mf-fnZ" sceneMemberID="viewController">
+                <viewController id="JXx-mf-fnZ" customClass="BookmarkViewController" customModule="GSAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfK-65-VBv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-pn-kgM">
+                                <rect key="frame" x="16" y="123" width="358" height="620"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JXx-mf-fnZ" id="0xU-4d-KIw"/>
+                                    <outlet property="delegate" destination="JXx-mf-fnZ" id="wlR-Q3-8AG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5xW-qI-qHb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VOp-pn-kgM" firstAttribute="leading" secondItem="5xW-qI-qHb" secondAttribute="leading" constant="16" id="0ZM-p5-vYI"/>
+                            <constraint firstItem="5xW-qI-qHb" firstAttribute="trailing" secondItem="VOp-pn-kgM" secondAttribute="trailing" constant="16" id="BJp-mc-Ztr"/>
+                            <constraint firstItem="5xW-qI-qHb" firstAttribute="bottom" secondItem="VOp-pn-kgM" secondAttribute="bottom" constant="18" id="HGd-gU-QCg"/>
+                            <constraint firstItem="VOp-pn-kgM" firstAttribute="top" secondItem="5xW-qI-qHb" secondAttribute="top" constant="35" id="O9m-14-syq"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="fH5-Sm-o5W">
-                        <imageReference key="selectedImage" image="suit.heart.fill" catalog="system" renderingMode="original"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="BookMark" id="Ep0-iJ-WTS"/>
+                    <connections>
+                        <outlet property="bookMarkListView" destination="VOp-pn-kgM" id="H5m-wl-G8e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bae-bP-3LP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-811" y="555"/>
+            <point key="canvasLocation" x="116.92307692307692" y="554.50236966824639"/>
         </scene>
         <!--Top Images-->
         <scene sceneID="tne-QT-ifu">
@@ -86,7 +103,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="cT9-z1-fcz"/>
                                         </constraints>
-                                        <locale key="locale" localeIdentifier="en_IN"/>
+                                        <locale key="locale" localeIdentifier="en"/>
                                         <connections>
                                             <action selector="selectedDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="MHN-iE-hmp"/>
                                         </connections>
@@ -151,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9we-Dr-y9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933.8461538461538" y="35.545023696682463"/>
+            <point key="canvasLocation" x="1615" y="176"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XGI-WQ-iaQ">
@@ -171,6 +188,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0V-yF-SsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-806.15384615384608" y="-321.32701421800948"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uyt-eb-2EZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MlJ-Pf-ado" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="fH5-Sm-o5W">
+                        <imageReference key="selectedImage" image="suit.heart.fill" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rsu-3F-0vs">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JXx-mf-fnZ" kind="relationship" relationship="rootViewController" id="zA8-R2-Wu3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZq-29-C4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812.30769230769226" y="554.50236966824639"/>
         </scene>
     </scenes>
     <resources>

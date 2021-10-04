@@ -20,9 +20,6 @@ class ImageViewController: UIViewController {
         super.viewDidLoad()
         imageGrid.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCell")
         datePicker.maximumDate = Date()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         getImageForDay(date: Date())
     }
     
