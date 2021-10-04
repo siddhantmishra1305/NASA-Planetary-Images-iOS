@@ -11,8 +11,8 @@ enum ServerRequest{
     case getImage(String)
     case getImages(String, String)
     
-    private static let baseURLString = "https://api.nasa.gov"
-    private static let API_KEY = "Wg9zXPt7SgU1JQJpXMWLfCcWIBPwTYdcYq58vHQh"
+//    private static let baseURLString = "https://api.nasa.gov"
+//    private static let API_KEY = "Wg9zXPt7SgU1JQJpXMWLfCcWIBPwTYdcYq58vHQh"
     
     private enum HTTPMethod {
         case get
@@ -46,11 +46,11 @@ enum ServerRequest{
     }
     
     func request() throws -> URLRequest? {
-        var urlString = "\(ServerRequest.baseURLString)\(path)"
+        var urlString = "\(Constants.baseURLString)\(path)"
         
         switch self {
         case .getImage(let selectedDate):
-            var params : [String : String] = ["api_key" : ServerRequest.API_KEY]
+            var params : [String : String] = ["api_key" : Constants.API_KEY]
             params["date"] = selectedDate
             
             encodeURL(path: &urlString, params: params)
@@ -63,7 +63,7 @@ enum ServerRequest{
             return urlRequest
             
         case .getImages(let startDate, let endDate):
-            var params : [String : String] = ["api_key" : ServerRequest.API_KEY]
+            var params : [String : String] = ["api_key" : Constants.API_KEY]
             params["start_date"] = startDate
             params["end_date"] = endDate
             

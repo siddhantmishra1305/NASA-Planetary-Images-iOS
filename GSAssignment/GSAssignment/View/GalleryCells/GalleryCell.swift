@@ -15,7 +15,6 @@ class GalleryCell: UICollectionViewCell {
     
     var cellData:ImageModel!{
         didSet{
-//            setupUI()
             activityIndicator.startAnimating()
             date_lbl.text = cellData.date
             galleryImageView.imageFromServerURL(urlString: cellData.hdurl ?? cellData.url ?? "", placeHolder: nil) {[weak self] result in
@@ -25,11 +24,5 @@ class GalleryCell: UICollectionViewCell {
                 }
             }
         }
-    }
-    
-    func setupUI(){
-        self.layer.cornerRadius = 10.0
-        self.layer.masksToBounds = true
-        self.galleryImageView.layer.cornerRadius = 10.0
     }
 }
