@@ -10,10 +10,7 @@ import Foundation
 enum ServerRequest{
     case getImage(String)
     case getImages(String, String)
-    
-//    private static let baseURLString = "https://api.nasa.gov"
-//    private static let API_KEY = "Wg9zXPt7SgU1JQJpXMWLfCcWIBPwTYdcYq58vHQh"
-    
+
     private enum HTTPMethod {
         case get
         case post

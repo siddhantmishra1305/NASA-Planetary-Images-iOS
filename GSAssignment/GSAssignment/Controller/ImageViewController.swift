@@ -25,16 +25,16 @@ class ImageViewController: UIViewController {
     
     func getImageForDay(date:Date){
         
-        guard let startDate = date.startOfWeek?.toString(format: "yyyy-MM-dd") else{
+        guard let startDate = date.startOfWeek?.toString(format: Constants.dateFormat) else{
             return
         }
         
-        guard var endDate = date.endOfWeek?.toString(format: "yyyy-MM-dd") else{
+        guard var endDate = date.endOfWeek?.toString(format: Constants.dateFormat) else{
             return
         }
         
         if date.endOfWeek! > Date(){
-            endDate = Date().toString(format: "yyyy-MM-dd")!
+            endDate = Date().toString(format: Constants.dateFormat)!
         }
         
         imageVM.getImages(startDate: startDate, endDate: endDate) {[weak self] result, messsage in
